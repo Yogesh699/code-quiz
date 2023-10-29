@@ -18,3 +18,7 @@
 .start-page{
     text-align: center;
 }
+
+.hide-me {
+    display: none;
+}
