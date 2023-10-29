@@ -42,6 +42,8 @@ function startSubediQuiz() {
     timerId = setInterval(timerHandler, 1000);
     timeEl.textContent = timeLeft;
     startPage.setAttribute('class', 'hide-me');
+
+    questionsPage.removeAttribute('class');
 }
 
 function timerHandler() {
