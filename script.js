@@ -44,7 +44,19 @@ function startSubediQuiz() {
     startPage.setAttribute('class', 'hide-me');
 
     questionsPage.removeAttribute('class');
+    showQuestion();
 }
+
+function showQuestion(){
+    let thisQuestion = questions[index];
+    let questionEl = document.getElementById('question');
+    questionEl.textContent = thisQuestion.question;
+
+    answers.innerHTML = "";
+
+    
+}
+
 
 function timerHandler() {
     timeLeft--;
