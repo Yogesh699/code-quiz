@@ -88,6 +88,25 @@ function checkAnswers(event) {
 
         timeEl.textContent = timeLeft;
         feedbackDiv.textContent = "incorrect";
-
     }
+    else {
+        feedbackDiv.textContent = "correct";
+    }
+
+    feedbackDiv.setAttribute("class", "feedback-div");
+    setTimeout((function () {
+        feedbackDiv.setAttribute("class", "feedback-div hide-me");
+    }, 1000));
+
+    index++;
+
+    if (timeLeft <= 0 || index === questions.length) {
+        endQuiz();
+    } else {
+        showQuestion();
+    }
+}
+
+function endQuiz() {
+    // TBD
 }
