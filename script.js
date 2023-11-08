@@ -33,7 +33,7 @@ let questions = [
 ];
 
 let questionsPage = document.getElementById("questions-page");
-let answers = document.getElementById("answers-page");
+let answers = document.getElementById("answers");
 let index = 0;
 let startPage = document.getElementById("start-page");
 
@@ -54,7 +54,15 @@ function showQuestion(){
 
     answers.innerHTML = "";
 
-    
+    for (let i = 0; i < thisQuestion.answers.length; i++){
+        let ans = thisQuestion.answers[i];
+        let ansEl = document.createElement('button');
+        ansEl.setAttribute('class', 'answer');
+        ansEl.setAttribute('value', ans);
+
+        ansEl.textContent = i + 1 + ". " + ans;
+
+        answers.appendChild(ansEl);    }
 }
 
 
