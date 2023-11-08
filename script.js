@@ -47,14 +47,14 @@ function startSubediQuiz() {
     showQuestion();
 }
 
-function showQuestion(){
+function showQuestion() {
     let thisQuestion = questions[index];
     let questionEl = document.getElementById('question');
     questionEl.textContent = thisQuestion.question;
 
     answers.innerHTML = "";
 
-    for (let i = 0; i < thisQuestion.answers.length; i++){
+    for (let i = 0; i < thisQuestion.answers.length; i++) {
         let ans = thisQuestion.answers[i];
         let ansEl = document.createElement('button');
         ansEl.setAttribute('class', 'answer');
@@ -62,11 +62,32 @@ function showQuestion(){
 
         ansEl.textContent = i + 1 + ". " + ans;
 
-        answers.appendChild(ansEl);    }
+        answers.appendChild(ansEl);
+    }
 }
 
 
 function timerHandler() {
     timeLeft--;
     timeEl.textContent = timeLeft
+}
+answers.onclick = checkAnswers;
+
+function checkAnswers(event) {
+    let btn = event.target;
+
+    if (!btn.matches(".answer")) {
+        return;
+    }
+
+    if (btn.value !== questions[index].ans) {
+        timeLeft -= 10;
+        if (timeLeft < 0) {
+            timeLeft = 0;
+        }
+
+        timeEl.textContent = timeLeft;
+
+        
+    }
 }
