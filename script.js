@@ -72,7 +72,7 @@ function timerHandler() {
     timeEl.textContent = timeLeft
 }
 answers.onclick = checkAnswers;
-
+let feedbackDiv = document.getElementById("feedback-div")
 function checkAnswers(event) {
     let btn = event.target;
 
@@ -87,7 +87,7 @@ function checkAnswers(event) {
         }
 
         timeEl.textContent = timeLeft;
+        feedbackDiv.textContent = "incorrect";
 
-        
     }
 }
