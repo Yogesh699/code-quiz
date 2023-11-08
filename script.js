@@ -80,7 +80,7 @@ function checkAnswers(event) {
         return;
     }
 
-    if (btn.value !== questions[index].ans) {
+    if (btn.value !== questions[index].correctAns) {
         timeLeft -= 10;
         if (timeLeft < 0) {
             timeLeft = 0;
@@ -108,5 +108,5 @@ function checkAnswers(event) {
 }
 
 function endQuiz() {
-    // TBD
+    // TBD 
 }
