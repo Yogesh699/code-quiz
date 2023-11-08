@@ -109,4 +109,6 @@ function checkAnswers(event) {
 
 function endQuiz() {
     // TBD 
+    let endPageEl=document.getElementById("end-page");
+    endPageEl.removeAttribute("class");
 }
