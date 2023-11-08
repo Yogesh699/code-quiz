@@ -6,9 +6,9 @@ let timerId;
 
 let questions = [
     {
-        question: "q1",
-        answers: ['a1', 'a2', 'a3', 'a4'],
-        correctAns: 'a3'
+        question: "Javascript is an _______ language?",
+        answers: ['Object-Oriented', 'Object-Based', 'Procedural', 'None of the above'],
+        correctAns: 'Object-Oriented'
     },
     {
         question: "q2",
